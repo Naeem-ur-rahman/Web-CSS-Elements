@@ -1,0 +1,58 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(81, 15, 143);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    width: 200px;
+    height: 250px;
+    background-color: #07182E;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+
+
+.card::before {
+    content: '';
+    position: absolute;
+    right: 50px;
+    top: -30px;
+    height: 400px;
+    width: 100px;
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+    animation: rotBGimg 2s linear infinite;
+    transform: all .2s linear;
+}
+
+@keyframes rotBGimg {
+    from {
+        transform: rotate(0deg);
+    }
+    
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.card::after {
+    content: 'Naeem ur Rahman Sajid';
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* main section below  */
+    position: absolute;
+    background-color: #07182E;
+    inset: 5px;
+    border-radius: 10px;
+}
