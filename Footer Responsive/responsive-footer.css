@@ -1,0 +1,57 @@
+@media (width < 620px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    footer.down-footer {
+        gap: 16px;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
+
+@media (max-width:912px) and (min-width:620px) {
+    footer {
+        margin: 20px auto;
+        padding: 0px;
+    }
+    footer h2{
+        font-size: 10px;
+    }
+    
+    footer a{
+        font-size: 16px;
+    }
+}
+
+@media (width < 420px) {
+    footer {
+        align-items: center;
+    }
+
+    .up-footer .links {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    footer .bottom-footer {
+        align-items: center;
+    }
+
+    footer .legal>span {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 2px;
+    }
+    #email-field {
+        width: 200px;
+    }
+    #submit-btn {
+        width: 80px;
+    }
+}

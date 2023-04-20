@@ -1,0 +1,121 @@
+footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    margin: 0 30px;
+    color: #a2b5cd;
+    flex-wrap: wrap;
+    background-color: #370570;
+}
+
+.up-footer {
+    border-top-right-radius: 2vw;
+    border-top-left-radius: 2vw;
+    border-bottom: 2px solid #5c7eac;
+
+    padding: 20px 10px;
+}
+
+.up-footer .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: start;
+}
+
+.down-footer {
+    padding: 20px 10px;
+    border-bottom-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+}
+
+footer .links>div {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 30px;
+    align-items: start;
+    justify-items: start;
+}
+
+footer h2 {
+    font-family: 'Roboto';
+    margin: 0;
+    font-size: 26px;
+    font-weight: 400;
+    color: #f7f7f7;
+}
+
+footer a {
+    font-family: 'Roboto';
+    font-size: 16px;
+    color: #f7f7f7;
+    text-decoration: none;
+}
+
+.legal {
+    font-size: 12px;
+    gap: 20px;
+}
+
+.legal>a {
+    margin: 4px;
+
+}
+
+.legal>span {
+    margin-right: 10px;
+}
+
+.down-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.down-footer .links {
+    display: flex;
+    gap: 18px;
+}
+
+.down-footer .links>a {
+    font-size: 24px;
+}
+
+#email-field {
+    background: rgba(46, 44, 140, 0.53);
+    border-radius: 30px;
+    border: none;
+    min-width: 200px;
+    height: 30px;
+    padding: 10px;
+    color: white;
+    font-size: medium;
+}
+
+#email-field::placeholder {
+    color: white;
+    opacity: 0.5;
+    font-size: medium;
+    font-family: 'Roboto';
+}
+
+.input-email {
+    display: flex;
+    position: relative;
+}
+
+#submit-btn {
+    background: linear-gradient(99.19deg, rgba(24, 74, 121, 0.79) -15.9%, rgba(27, 214, 255, 0.63) 31.73%, #2C3095 70.99%);
+    border-radius: 30px;
+    border: none;
+    min-width: 80px;
+    height: 40px;
+    position: absolute;
+    right: 0px;
+    top: 10%;
+    font-size: medium;
+    cursor: pointer;
+    font-family: 'Roboto';
+}
