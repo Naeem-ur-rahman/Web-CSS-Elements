@@ -1,0 +1,76 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+.container {
+     width: 400px;
+     height: 250px;
+     border-radius: 15px;
+     box-shadow: inset 0 0 0 400px #000000aa;
+     transition: box-shadow .4s;
+}
+
+.container:hover {
+     box-shadow: inset 0 0 0 400px #00000000;
+}
+
+main {
+     display: flex;
+     min-height: 100vh;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+     gap: 10px;
+     background-color: rgb(192, 176, 176);
+     padding: 10px 10px;
+}
+
+header {
+     height: 10vh;
+     width: 100vw;
+     background-color: black;
+     color: white;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.image1 {
+     background-image: url('car\ 1.jpg');
+}
+
+.image2 {
+     background-image: url('car\ 2.jpg');
+}
+
+.image3 {
+     background-image: url('car\ 3.jpg');
+}
+
+.image4 {
+     background-image: url('car\ 4.jpg');
+}
+
+.image5 {
+     background-image: url('car\ 5.jpg');
+}
+
+.image6 {
+     background-image: url('car\ 6.jpg');
+}
+
+.image7 {
+     background-image: url('car\ 7.jpg');
+}
+
+.image8 {
+     background-image: url('car\ 8.jpg');
+}
+
+.background {
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+}
