@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Blog Page</title>
+     <!-- Icon Font Stylesheet -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <style>
+          * {
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+               font-family: "Roboto", Arial, Tahoma, sans-serif;
+          }
+
+          body {
+               background-color: #f7f7f7;
+          }
+
+          .filter {
+               padding: 1rem 5%;
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               gap: 1rem;
+               user-select: none;
+          }
+
+          .filter .start {
+               display: flex;
+               align-items: center;
+               gap: 1rem;
+               color: #B3A8A8;
+          }
+
+          .filter .click {
+               color: #24A7FF;
+               cursor: pointer;
+          }
+
+          .filter .click:hover {
+               color: #007CC3;
+          }
+
+          .filter .click:hover span {
+               text-decoration: underline;
+          }
+
+          .blog-container {
+               padding: 1rem 5%;
+          }
+
+          .blog-item {
+               display: flex;
+               gap: 2rem;
+          }
+
+          .blog-item .left {
+               width: 55%;
+          }
+
+          .blog-item .left .img-box {
+               border: .4rem solid black;
+               border-top-left-radius: 2rem;
+               border-bottom-right-radius: 2rem;
+               overflow: hidden;
+               height: 100%;
+               display: flex;
+          }
+
+          .blog-item .left .img-box img {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+               transition: all .5s ease;
+          }
+
+          .blog-item .left .img-box:hover img {
+               transform: scale(1.05);
+               opacity: .7;
+          }
+
+          .blog-item .right {
+               display: flex;
+               flex-direction: column;
+               gap: .5rem;
+               width: 100%;
+          }
+
+          .blog-item .right .published-data {
+               display: flex;
+               gap: 1rem;
+               justify-content: space-between;
+               color: #B3A8A8;
+               padding: 1rem 0;
+          }
+
+          .blog-item .right .published-data a {
+               color: #B3A8A8;
+               text-decoration: underline;
+          }
+
+          .blog-item .right .published-data select {
+               color: #B3A8A8;
+               border: none;
+               background: #f7f7f7;
+               font-size: 16px;
+               cursor: pointer;
+          }
+
+          .blog-item .right h2 a {
+               color: #24A7FF;
+               text-decoration: none;
+          }
+
+          .blog-item .right>p {
+               color: #626262;
+          }
+
+          .blog-item .right .card {
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               gap: 1rem;
+               padding: 1rem;
+               background-color: white;
+               border-bottom: .1rem solid #B3A8A8;
+               color: #B3A8A8;
+               border-radius: .1rem;
+          }
+
+          .blog-item .right .card a {
+               color: #007CC3;
+               text-decoration: none;
+          }
+
+          .blog-item .right .card a:hover {
+               text-decoration: underline;
+          }
+
+          .blog-item .right .card p {
+               display: flex;
+               align-items: center;
+               gap: 1rem;
+          }
+
+          .btn {
+               background-color: orange;
+               color: white;
+               padding: .5rem;
+          }
+
+          .blog-item .right .card a.btn {
+               color: white;
+          }
+
+          @media only screen and (max-width: 2560px) {}
+
+          @media only screen and (max-width: 1920px) {}
+
+          @media only screen and (max-width: 1440px) {}
+
+          @media only screen and (max-width: 1366px) {}
+
+          @media only screen and (max-width: 1280px) {
+
+               .filter p,
+               .blog-container p,
+               .blog-container .right .published-data select {
+                    font-size: 13px;
+               }
+          }
+
+          @media only screen and (max-width: 1024px) {
+               .blog-item .left .img-box {
+                    border-width: .3rem;
+               }
+          }
+
+          @media only screen and (max-width: 991px) {
+               .blog-item {
+                    gap: 1rem;
+               }
+          }
+
+          @media only screen and (max-width: 768px) {
+               .blog-item {
+                    flex-direction: column;
+                    align-items: center;
+               }
+
+               .blog-item .left {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+               }
+
+               .blog-item .right {
+                    width: 90%;
+               }
+
+               .blog-item .left .img-box {
+                    width: 90%;
+                    border-width: .4rem;
+               }
+          }
+
+          @media only screen and (max-width: 600px) {
+
+               .filter p,
+               .blog-container p,
+               .blog-container .right .published-data select {
+                    font-size: 12px;
+               }
+
+               .blog-item .left .img-box {
+                    border-width: .3rem;
+               }
+          }
+
+          @media only screen and (max-width: 480px) {}
+
+          @media only screen and (max-width: 414px) {
+               .filter {
+                    padding: 1rem 2%;
+               }
+
+               .blog-container {
+                    padding: 1rem 2%;
+               }
+
+               .filter p,
+               .blog-container p,
+               .blog-container .right .published-data select {
+                    font-size: 10px;
+               }
+          }
+
+          @media only screen and (max-width: 320px) {}
+     </style>
+</head>
+
+<body>
+
+     <section class="filter">
+          <div class="start">
+               <p>Filter by</p>
+               <p class="click"> <i class="fa fa-clone"></i> <span> Categories </span> <i class="fa fa-caret-down"></i>
+               </p>
+               <p class="click"> <i class="fa fa-tag"></i> <span> Tags </span> <i class="fa fa-caret-down"></i></p>
+               <p class="click"> <i class="fa fa-user"></i> <span> Authors </span> <i class="fa fa-caret-down"></i></p>
+          </div>
+          <div class="end">
+               <p class="click"> <i class="fa fa-times"></i> <span> Show all </span></p>
+          </div>
+     </section>
+
+     <section class="blog-container">
+          <div class="blog-item">
+               <div class="left">
+                    <div class="img-box">
+                         <img src="blog-img.jpg" alt="img">
+                    </div>
+               </div>
+               <div class="right">
+                    <div class="published-data">
+                         <p>Published by <i class="fa fa-user"></i> <a href="#">Haddocksoft</a> <i
+                                   class="fa fa-clock-o"></i> on July 20,2023</p>
+                         <select name="Catagories" id="Catagories">
+                              <option value="Catagories">Catagories</option>
+                              <option value="Uncatagorized">Uncatagorized</option>
+                         </select>
+                    </div>
+                    <h2><a href="#">Test Blog</a></h2>
+                    <p>At Goa Refitz Car Repair Services in Abu Dhabi, UAE, we prioritize the well-being of your vehicle
+                         and strive to deliver exceptional mechanical services. Our skilled […]</p>
+                    <div class="card">
+                         <p>Do you like it? <a href="#"><i class="fa fa-heart-o"></i></a> <span
+                                   id="count-likes">1</span></p>
+                         <p><i class="fa fa-comment-o"></i> <a href="#">0</a> <i class="fa fa-file-text-o"></i>
+                              <a href="#" class="btn">Read more</a>
+                         </p>
+                    </div>
+               </div>
+          </div>
+     </section>
+</body>
+
+</html>
